@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MVC_CRUD_EF_TwoTables.Models
 {
@@ -18,6 +19,9 @@ namespace MVC_CRUD_EF_TwoTables.Models
         [Required]
         [Phone(ErrorMessage = "Please enter a valid phone number")]
         public string PhoneNumber { get; set; }
+        [Required]
+        [ForeignKey("Property")]
+        public int PropertyID { get; set; }
 
         // Navigation property for related property
         public virtual Property? Property { get; set; }

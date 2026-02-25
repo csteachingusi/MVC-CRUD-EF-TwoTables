@@ -5,7 +5,7 @@ namespace MVC_CRUD_EF_TwoTables.Models
     public class Property
     {
         [Key]
-        public int PropertyId { get; set; }
+        public int PropertyID { get; set; }
         [Required(ErrorMessage="Please enter the property name")]
         [StringLength(100)]
         public string PropertyName { get; set; }
